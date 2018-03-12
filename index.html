@@ -3,6 +3,7 @@
 <div id="app">
     <input type="text" v-on:input="changeTitle">
 <p> {{ sayHello() }} - <a v-bind:href="link">Mobidev</a> </p>
+    <p v-html="finishedLink"></p>
 </div>
 
 
@@ -12,7 +13,8 @@
                         el: '#app',
                         data: {
                             title: 'Hello World',
-                            link : 'http://devs.mobi'
+                            link : 'http://devs.mobi',
+                            finishedLink: '<a href="http://devs.mobi">Mobidev</a>',
                         },
 
                         methods: {
